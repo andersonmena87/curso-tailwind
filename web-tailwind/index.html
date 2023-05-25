@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Tailwind</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<!-- bg-body-pattern configurada en el archivo tailwind.config.js -->
+
+<body class="bg-body-pattern bg-scroll">
+    <!-- CABECERA -->
+    <header class="
+            h-20
+            bg-black
+            text-white
+            bebas
+            w-full
+        ">
+        <div class="container mx-auto flex flex-row">
+            <div id="logo" class="flex-1">
+                <div class="
+                    w-64
+                    pt-0.5
+                    pb-0.5
+                    mt-4
+                    ml-6
+                    bg-blue-light
+                    text-center
+                    tracking-wider
+                    cursor-pointer
+                    overflow-hidden
+                    transition
+                    duration-300
+                    rounded-sm
+                    hover:text-black
+                    hover:bg-gray-200
+                ">
+                    <span class="
+                        symbol
+                        block
+                        float-left
+                        text-3xl
+                        mt-1
+                        ml-11
+                    ">S</span>
+                    <h3 class="
+                        block
+                        float-right
+                        text-4xl
+                        mt-1.5
+                        mr-16
+                        transition
+                        duratio-100
+                    ">TAILWIND</h3>
+                </div>
+            </div>
+
+            <nav class="flex-1">
+                <ul class="
+                    flex
+                    flex-row
+                    h-20
+                    items-center
+                    justify-end
+                    text-2xl
+                    text-center
+                    mr-6
+                ">
+                    <li class="menu-item">
+                        <a class="menu-item-a" href="#">INICIO</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item-a" href="#">BLOG</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item-a" href="#">FORMACIÓN</a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="menu-item-a" href="#">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- FIN CABECERA -->
+</body>
+
+</html>
