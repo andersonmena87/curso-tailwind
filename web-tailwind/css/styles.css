@@ -611,10 +611,17 @@ video {
 
 .menu-item {
   /* Aplica todas las clases de tailwind, se deben separa por espacio y en una solo linea */
+  /* Tambien se pueden separar por enter y cerrando con ; al final */
   margin-right: 1.25rem;
   margin-left: 1.25rem;
   flex: none;
-  letter-spacing: 0.05em
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 640px) {
+  .menu-item {
+    flex: 1 1 0%;
+  }
 }
 
 .menu-item-a {
@@ -747,8 +754,16 @@ video {
   margin-left: 2.75rem;
 }
 
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
 .mr-16 {
   margin-right: 4rem;
+}
+
+.mr-6 {
+  margin-right: 1.5rem;
 }
 
 .mt-1 {
@@ -765,22 +780,6 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.ml-5 {
-  margin-left: 1.25rem;
-}
-
-.ml-6 {
-  margin-left: 1.5rem;
-}
-
-.mr-6 {
-  margin-right: 1.5rem;
 }
 
 .box-border {
@@ -886,16 +885,12 @@ video {
   height: 5rem;
 }
 
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .w-64 {
   width: 16rem;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.w-screen {
-  width: 100vw;
 }
 
 .flex-1 {
@@ -960,6 +955,16 @@ video {
 
 .transform-none {
   transform: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-low {
+  animation: spin 2s linear infinite;
 }
 
 .cursor-pointer {
@@ -2541,9 +2546,51 @@ video {
   text-align: center;
 }
 
+@keyframes fromBellow {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.group:hover .group-hover\:animate-from-bellow {
+  animation: fromBellow 500ms linear;
+}
+
+@keyframes fromRight {
+  0% {
+    transform: translateX(200%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.group:hover .group-hover\:animate-from-right {
+  animation: fromRight 300ms linear;
+}
+
+.group:hover .group-hover\:animate-none {
+  animation: none;
+}
+
 @media (min-width: 640px) {
   .sm\:underline {
     text-decoration-line: underline;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:justify-end {
+    justify-content: flex-end;
   }
 }
 
@@ -2552,5 +2599,28 @@ video {
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
       paint-order: markers;
     }
+  }
+}
+
+@media (max-width: 640px) {
+  .xs\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .xs\:mr-0 {
+    margin-right: 0px;
+  }
+
+  .xs\:h-36 {
+    height: 9rem;
+  }
+
+  .xs\:flex-col {
+    flex-direction: column;
+  }
+
+  .xs\:text-center {
+    text-align: center;
   }
 }

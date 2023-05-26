@@ -18,10 +18,17 @@
             bg-black
             text-white
             bebas
-            w-full
+            xs:h-36
         ">
-        <div class="container mx-auto flex flex-row">
-            <div id="logo" class="flex-1">
+        <div class="
+            container 
+            w-11/12 
+            mx-auto 
+            flex 
+            flex-row
+            xs:flex-col
+        ">
+            <div id="logo" class="flex-1 xs:mx-auto">
                 <div class="
                     w-64
                     pt-0.5
@@ -38,6 +45,7 @@
                     rounded-sm
                     hover:text-black
                     hover:bg-gray-200
+                    group
                 ">
                     <span class="
                         symbol
@@ -46,6 +54,9 @@
                         text-3xl
                         mt-1
                         ml-11
+                        animate-spin-low
+                        group-hover:animate-none
+                        group-hover:animate-from-bellow
                     ">S</span>
                     <h3 class="
                         block
@@ -55,6 +66,7 @@
                         mr-16
                         transition
                         duratio-100
+                        group-hover:animate-from-right
                     ">TAILWIND</h3>
                 </div>
             </div>
@@ -65,10 +77,12 @@
                     flex-row
                     h-20
                     items-center
-                    justify-end
                     text-2xl
                     text-center
                     mr-6
+                    xs:mr-0
+                    xs:text-center
+                    md:justify-end
                 ">
                     <li class="menu-item">
                         <a class="menu-item-a" href="#">INICIO</a>

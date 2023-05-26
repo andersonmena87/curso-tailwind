@@ -49,7 +49,14 @@
 @layer components {
     .menu-item {
         /* Aplica todas las clases de tailwind, se deben separa por espacio y en una solo linea */
-        @apply mr-5 ml-5 tracking-wider flex-none
+        /* Tambien se pueden separar por enter y cerrando con ; al final */
+        @apply 
+            mr-5 
+            ml-5 
+            tracking-wider 
+            flex-none
+            xs:flex-1
+        ;    
     }
 
     .menu-item-a {
